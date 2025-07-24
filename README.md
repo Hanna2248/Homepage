@@ -1,2 +1,2 @@
 # Homepage
-Ich 
+Dies ist eine Webseite über mich und meine FProjekte
