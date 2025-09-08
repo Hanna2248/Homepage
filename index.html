@@ -6,17 +6,19 @@
   <title>Hanna Trush Webpage</title>
   <style>
     body {
-      background-color: #4d7dac;
-      display: flex;
-      justify-content: flex-start; /* Inhalte nach links ausrichten */
-      align-items: center;
+      background-image: url('background.img');
+      background-size: cover;       /* Bild füllt den gesamten Hintergrund */
+      background-position: center;  /* Bild zentriert */
+      background-repeat: no-repeat; /* Bild wird nicht wiederholt */
+
       height: 100vh;
       margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-family: Arial, sans-serif;
-      gap: 2rem; /* Abstand zwischen Bild und Karte */
-      padding-left: 2rem; /* etwas Abstand vom linken Rand */
     }
-
+    
     img {
       max-width: 800px;
       height: auto;
