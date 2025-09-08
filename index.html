@@ -8,11 +8,19 @@
     body {
       background-color: #4d7dac;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start; /* Inhalte nach links ausrichten */
       align-items: center;
       height: 100vh;
       margin: 0;
       font-family: Arial, sans-serif;
+      gap: 2rem; /* Abstand zwischen Bild und Karte */
+      padding-left: 2rem; /* etwas Abstand vom linken Rand */
+    }
+
+    img {
+      max-width: 800px;
+      height: auto;
+      border-radius: 8px;
     }
 
     .card {
@@ -22,7 +30,6 @@
       padding: 2rem;
       text-align: center;
       max-width: 300px;
-      display: none;
     }
 
     .card h1 {
@@ -35,21 +42,14 @@
       margin: 0;
       color: #555;
     }
-    
   </style>
 </head>
 <body>
-<div class="card">
+  <img src="2.png" alt="Foto"/>
+
+  <div class="card">
     <h1>Hanna Trush</h1>
     <p>Web Developer & Designer</p>
   </div>
-</body>
-  <body>
-    <p align="left">
-      <img src="2.png"
-      height="850"
-      width="800">
-    </p>
-  </body> 
 </body>
 </html>
