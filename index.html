@@ -6,52 +6,117 @@
   <title>Hanna Trush Webpage</title>
   <style>
     body {
-      margin: 0;
-      height: 100vh;
-      background-image: url('background.jpg'); /* Hintergrundbild */
-      background-size: cover;
-      background-position: center;
-      position: relative; /* wichtig für absolute Positionierung */
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    .card {
-      position: relative;
-      background-color: white;
-      width: 90%;
-      height: 90%;
-      z-index: 100;
-      border-radius: 25px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-   
-    .card h1 {
-      margin: 0;
-      font-size: 2rem;
-      color: #333;
-    }
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
 
-    .card p {
-      margin: 0.5rem 0 1.5rem;
-      color: #666;
-    }
+/* Container for flexboxes */
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
 
-    .image {
+/* Create three unequal columns that sits next to each other */
+.column {
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Left and right column */
+.column.side {
+   -webkit-flex: 1;
+   -ms-flex: 1;
+   flex: 1;
+}
+
+/* Middle column */
+.column.middle {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.container {
+  display: flex;
+}
+
+.left {
+  flex: 1;           /* nimmt die Hälfte */
+  background: #4d7dac;
+  color: white;
+  padding: 20px;
+}
+
+.right {
+  flex: 1;           /* nimmt die andere Hälfte */
+  background: #f1f1f1;
+  padding: 20px;
+}
+
+button {
+  background-color: #FDD638; /* Hintergrundfarbe */
+  color: black;             /* Schriftfarbe */
+  border: none;
+  border-radius: 4px; 
+  width: 50px;   /* feste Breite */
+  height: 20px;
+}
+
+.image {
       width: 300px;
       height: 400px;
     }
 
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+ 
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Hallo, ich bin Hanna</h1>
-    <p>Web-designerin</p>
-  <img src="2.png" alt="Foto" style="position: absolute; top: 200px; right: 100px; width: 800px;">
+
+<div class="header">
+  <h2>Header</h2>
+</div>
+
+<div class="row">
+  <div class="column side" style="background-color:#aaa;">Column</div>
+  <div class="column middle" style="background-color:#bbb;">
+<div class="container">
+  <div class="left">
+    <h1>Hey, ich bin Hanna Trush.</h1>
+    <h3>Eine kreative Grafikdesignerin mit einem Auge fürs Detail.</h3>
+    <p>Ich verwandle Ideen in visuell ansprechende und funktionale Designs. Ich habe Erfahrung in Branding, Print- und Digitalmedien. Mein Ziel ist es, mich weiterzuentwickeln und inspirierendes Design zu schaffen.</p>
+  <button>Weiter</button>
+  </div>
+   <div class="right"><img src="2.png" alt="Foto" style="position: absolute; top: 200px; right: 100px; width: 800px;">
+   </div>
   </div>
   </div>
+  <div class="column side" style="background-color:#ccc;">Column</div>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+
 </body>
 </html>
